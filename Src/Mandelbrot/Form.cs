@@ -26,17 +26,17 @@ namespace Mandelbrot
 
         private void Draw(int[] data, int width, int height, int iterations, Color color)
         {
-            var bmp = new Bitmap(width, height);
+            var Bmp = new Bitmap(width, height);
             for (int i = 0; i < width * height; i++)
             {
                 int x = i % width;
                 int y = i / width;
                 if (data[i] == iterations)
-                    bmp.SetPixel(x, y, color);
+                    Bmp.SetPixel(x, y, color);
                 else
-                    bmp.SetPixel(x, y, Color.FromArgb((int)(4000000000 / ((data[i] < 1) ? 1 : data[i]))));
+                    Bmp.SetPixel(x, y, Color.FromArgb((int)(4000000000 / ((data[i] < 1) ? 1 : data[i]))));
             }
-            pictureBox1.Image = bmp;
+            pictureBox1.Image = Bmp;
         }
 
 

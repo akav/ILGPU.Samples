@@ -69,9 +69,9 @@ namespace Mandelbrot
         public static void CompileKernel(bool withCUDA)
         {
             context = new Context();
-            if (withCUDA)
-                accelerator = new CudaAccelerator(context);
-            else
+            //if (withCUDA)
+            //    accelerator = new CudaAccelerator(context);
+            //else
                 accelerator = new CPUAccelerator(context);
 
             mandelbrot_kernel = accelerator.LoadAutoGroupedStreamKernel<
@@ -147,7 +147,5 @@ namespace Mandelbrot
                 }
             }
         }
-
-
     }
 }

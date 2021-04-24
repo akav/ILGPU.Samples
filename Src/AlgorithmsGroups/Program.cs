@@ -10,10 +10,10 @@
 // -----------------------------------------------------------------------------
 
 using ILGPU;
-using ILGPU.Algorithms;
-using ILGPU.Algorithms.ScanReduceOperations;
 using ILGPU.Runtime;
+using ILGPU.Algorithms;
 using System;
+using ILGPU.Algorithms.ScanReduceOperations;
 
 namespace AlgorithmsGroups
 {
